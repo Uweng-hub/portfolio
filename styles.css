@@ -168,6 +168,31 @@ p {
 
 .project-card {
     min-height: 10rem;
+    transition: transform 280ms cubic-bezier(.2,.9,.3,1), box-shadow 280ms ease;
+    will-change: transform;
+    transform-origin: center;
+}
+
+.project-card h3 {
+    transition: transform 300ms ease, color 200ms ease;
+}
+
+.project-card p {
+    transition: transform 300ms ease, color 200ms ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.01);
+    box-shadow: 0 28px 70px rgba(15, 23, 42, 0.14);
+}
+
+.project-card:hover h3 {
+    transform: translateY(-6px);
+    color: #0b5fff;
+}
+
+.project-card:hover p {
+    transform: translateY(-4px);
 }
 
 .skills-grid {
